@@ -1,0 +1,213 @@
+
+:root {
+  --font-family: 'Nunito', sans-serif;
+  --font-weight: 450;
+  --font-size: 16px;
+  --background-gradient: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  --text-color: #333;
+  --card-bg: #fff;
+  --card-border: #ddd;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --highlight-shadow: rgba(0, 0, 0, 0.2);
+
+  /* Chart Colors */
+  --rest-color: #ff5733;
+  --ldap-color: #33c1ff;
+  --jdbc-color: #7dff33;
+  --sap-color: #ff33ab;
+
+  /* Table Colors */
+  --table-header-bg: #f1f1f1;
+  --table-row-alt: #f9f9f9;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 0;
+  background: var(--background-gradient);
+  color: var(--text-color);
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Wrapper Layout */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Section Styling */
+.section {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section:hover {
+  transform: scale(1.02);
+}
+
+/* Application Types */
+.application-types .chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 20px 0;
+}
+
+.bar {
+  width: 60px;
+  text-align: center;
+  position: relative;
+}
+
+.completed {
+  width: 100%;
+  transition: height 0.3s ease;
+}
+
+.pending {
+  width: 100%;
+  background-color: #e6f7ff;
+}
+
+.bar p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.bar div {
+  border-radius: 6px;
+}
+
+/* Dynamic Colors for Each Type */
+.bar[data-type="REST"] .completed {
+  background-color: var(--rest-color);
+}
+
+.bar[data-type="LDAP"] .completed {
+  background-color: var(--ldap-color);
+}
+
+.bar[data-type="JDBC"] .completed {
+  background-color: var(--jdbc-color);
+}
+
+.bar[data-type="SAP"] .completed {
+  background-color: var(--sap-color);
+}
+
+/* Summary Info */
+.summary-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.summary-box {
+  flex: 1;
+  text-align: center;
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.summary-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px var(--highlight-shadow);
+}
+
+.summary-box h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.summary-box p {
+  margin: 0;
+}
+
+.summary-box span {
+  font-size: 14px;
+}
+
+/* Pie Chart Section */
+.pie-chart {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--rest-color) 0% 40%,
+    var(--ldap-color) 40% 70%,
+    var(--jdbc-color) 70% 100%
+  );
+  margin: 0 auto 20px;
+}
+
+.pie-chart-wrapper .stats p {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+/* Onboarding Progress Table */
+.progress-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.progress-table th,
+.progress-table td {
+  border: 1px solid var(--card-border);
+  padding: 12px;
+  text-align: left;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+}
+
+.progress-table th {
+  background-color: var(--table-header-bg);
+  color: var(--text-color);
+}
+
+.progress-table tbody tr:nth-child(even) {
+  background-color: var(--table-row-alt);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 0;
+}

@@ -1,0 +1,129 @@
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  /* padding: 20px; */
+  height: 100vh;
+  }
+  
+  .left-section {
+    flex: 1;
+    background-color: #f5f7fb;
+    padding: 0px;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text alignment */
+    height: 100%; /* Ensure full height if needed */
+  }
+  
+  .left-section h2 {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .left-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .left-section ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .left-section ul li span {
+    font-weight: bold;
+    color: green;
+    margin-right: 10px;
+  }
+  
+  .right-section {
+    flex: 1;
+    max-width: 700px; /* Set a maximum width for the Sign In section */
+    margin: 0 auto; /* Center the Sign In section horizontally */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    /* border-radius: 8px;  */
+    background-color: white; /* Optional: Add a background color */
+    align-items: center;
+  }
+  
+  .registration-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  /* Common button styles */
+.btn-common {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for all buttons */
+.btn-common:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styles for full-width submit button */
+.submit-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+  
+/* Custom styles for disabled select */
+.disabled-select {
+  background-color: #e9ecef; /* Grey background */
+  color: #6c757d; /* Grey text */
+  border: 1px solid #ced4da; /* Grey border */
+}
+
+/* Optional: Style for the disabled select to make it appear clearly disabled */
+.disabled-select:disabled {
+  background-color: #e9ecef; /* Grey background */
+  color: #6c757d; /* Grey text */
+  cursor: not-allowed; /* Change cursor to indicate it's disabled */
+}
+
+/* Style for the placeholder "Select" to make it distinct */
+.select-placeholder {
+  color: #6c757d; /* Grey color for placeholder */
+  font-style: italic; /* Make placeholder text italic */
+}
+.hover-underline {
+  text-decoration: none; /* No underline by default */
+  font-size: 14px;
+}
+
+.hover-underline:hover {
+  text-decoration: underline; /* Show underline on hover */
+}
+

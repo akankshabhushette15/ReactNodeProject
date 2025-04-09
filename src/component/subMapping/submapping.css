@@ -1,0 +1,44 @@
+body{
+    font-family: 'Nunito', sans-serif;
+   
+    
+}
+
+
+.table-header {
+    font-weight: bold;
+    color: black;
+    background-color: #d2d5d8;
+    text-align: center;
+  }
+  /* styles.module.css */
+  .tableHeader {
+    font-weight: bold;
+    color: #fff;
+    background-color: #459af5;
+    text-align: center;
+  }
+  .blue-button {
+    background-color: #459af5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blue-button:hover {
+    background-color: #459af5;
+}
+
+.MuiMenuItem-root {
+  padding: 8px 16px; /* Adjust padding for dropdown items */
+  font-size: 14px; /* Ensure consistent font size */
+  line-height: 1.5; /* Improve readability */
+}
+
+.MuiPaper-root {
+  margin-top: 0 !important; /* Remove extra margin between the dropdown and select field */
+  border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+}
